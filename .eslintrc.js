@@ -41,7 +41,7 @@ module.exports = {
         //disallow unnecessary nested blocks
         "no-lone-blocks": ["error"],
         //disallow magic numbers
-        "no-magic-numbers": ["warn", { "ignore": [0, 1, 2, 3, 4, 5, 6, 11, 23] }],
+        "no-magic-numbers": ["warn", {"ignore": [0, 1], "ignoreArrayIndexes": true,  "detectObjects": true, "enforceConst": true }],
         //disallow variable redeclaration
         "no-redeclare": ["error"],
         /*
