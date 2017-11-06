@@ -116,7 +116,9 @@ module.exports = {
         //Disallow Use of Chained Assignment Expressions
         "no-multi-assign": ["error"],
         //enforce variables to be declared either together or separately in functions
-        "one-var": ["error", "never"],
+        "one-var": ["error", {"initialized": "never", "uninitialized": "always"}],
+        //require or disallow newlines around variable declarations
+        "one-var-declaration-per-line": ["error", "initializations"],
         //disallow nested ternary expressions
         "no-nested-ternary": ["error"],
         //disallow ternary operators when simpler alternatives exist
