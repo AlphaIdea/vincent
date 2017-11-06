@@ -24,6 +24,13 @@ module.exports = {
          * Comparing two literal values
          * Evaluating the value of typeof
          * Comparing against null
+         *
+         * Objects evaluate to true
+         * Undefined evaluates to false
+         * Null evaluates to false
+         * Booleans evaluate to the value of the boolean
+         * Numbers evaluate to false if +0, -0, or NaN, otherwise true
+         * Strings evaluate to false if an empty string '', otherwise true
          */
         "eqeqeq": ["error", "smart"],
         //disallow duplicate arguments in function definitions
@@ -65,8 +72,6 @@ module.exports = {
         "brace-style": ["warn", "1tbs", {"allowSingleLine": true}],
         //enforce consistent spacing inside computed property brackets
         "computed-property-spacing": ["warn"],
-        //require or disallow named function expressions
-        "func-names": ["warn", "as-needed"],
         //require parentheses when invoking a constructor with no arguments
         "new-parens": ["warn"],
         //disallow if statements as the only statement in else blocks
@@ -86,6 +91,42 @@ module.exports = {
         //require or disallow spacing around embedded expressions of template strings
         "template-curly-spacing": ["error"],
         //disallow unnecessary semicolons
-        "no-extra-semi": ["error"]
+        "no-extra-semi": ["error"],
+        //disallow Object constructors
+        "no-new-object": ["error"],
+        //require quotes around object literal property names
+        "quote-props": ["error", "as-needed", {"keywords": true, "numbers": true}],
+        //Prefer destructuring from arrays and objects
+        "prefer-destructuring": ["error"],
+        //Disallow Functions in Loops
+        "no-loop-func": ["error"],
+        //Suggest using the rest parameters instead of arguments
+        "prefer-rest-params": ["error"],
+        //Suggest using the spread operator instead of .apply()
+        "prefer-spread": ["error"],
+        //Disallow arrow functions where they could be confused with comparisons
+        "no-confusing-arrow": ["error"],
+        //Disallow duplicate imports
+        "no-duplicate-imports": ["error", { "includeExports": true }],
+        //Disallow Use of Chained Assignment Expressions
+        "no-multi-assign": ["error"],
+        //enforce variables to be declared either together or separately in functions
+        "one-var": ["error", "never"],
+        //disallow nested ternary expressions
+        "no-nested-ternary": ["error"],
+        //disallow ternary operators when simpler alternatives exist
+        "no-unneeded-ternary": ["error"],
+        //Disallow mixes of different operators
+        "no-mixed-operators": ["error"],
+        //Disallow return before else
+        "no-else-return": ["error"],
+        //Requires or disallows a whitespace (space or tab) beginning a comment
+        "spaced-comment": ["error"],
+        //require a newline after each call in a method chain
+        "newline-per-chained-call": ["error"],
+        //disallow whitespace before properties
+        "no-whitespace-before-property": ["error"],
+        //Disallow Primitive Wrapper Instances
+        "no-new-wrappers": ["error"]
     }
 };
