@@ -48,14 +48,19 @@ module.exports = {
         //disallow unnecessary nested blocks
         "no-lone-blocks": ["error"],
         //disallow magic numbers
-        "no-magic-numbers": ["warn", {"ignore": [0, 1], "ignoreArrayIndexes": true,  "detectObjects": true, "enforceConst": true }],
+        "no-magic-numbers": ["warn", {
+            "ignore": [0, 1],
+            "ignoreArrayIndexes": true,
+            "detectObjects": true,
+            "enforceConst": true
+        }],
         //disallow variable redeclaration
         "no-redeclare": ["error"],
         /*
         disallow assignments where both sides are exactly the same
         check properties as well
          */
-        "no-self-assign": ["error", { "props": true }],
+        "no-self-assign": ["error", {"props": true}],
         //disallow unnecessary concatenation of literals or template literals
         "no-useless-concat": ["error"],
         //disallow unnecessary escape characters
@@ -107,7 +112,7 @@ module.exports = {
         //Disallow arrow functions where they could be confused with comparisons
         "no-confusing-arrow": ["error"],
         //Disallow duplicate imports
-        "no-duplicate-imports": ["error", { "includeExports": true }],
+        "no-duplicate-imports": ["error", {"includeExports": true}],
         //Disallow Use of Chained Assignment Expressions
         "no-multi-assign": ["error"],
         //enforce variables to be declared either together or separately in functions
@@ -123,7 +128,7 @@ module.exports = {
         //Requires or disallows a whitespace (space or tab) beginning a comment
         "spaced-comment": ["error"],
         //require a newline after each call in a method chain
-        "newline-per-chained-call": ["error"],
+        "newline-per-chained-call": ["error", {"ignoreChainWithDepth": 4}],
         //disallow whitespace before properties
         "no-whitespace-before-property": ["error"],
         //Disallow Primitive Wrapper Instances
