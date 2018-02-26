@@ -44,12 +44,12 @@ module.exports = {
         //enforce getter and setter pairs in objects
         "accessor-pairs": ["error"],
         //disallow empty functions
-        "no-empty-function": ["error"],
+        "no-empty-function": ["warn"],
         //disallow unnecessary nested blocks
         "no-lone-blocks": ["error"],
         //disallow magic numbers
         "no-magic-numbers": ["warn", {
-            "ignore": [0, 1],
+            "ignore": [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 60, 24, 200, 406],
             "ignoreArrayIndexes": true,
             "detectObjects": true,
             "enforceConst": true
@@ -74,7 +74,7 @@ module.exports = {
         //enforce consistent spacing inside array brackets
         "array-bracket-spacing": ["error"],
         //enforce consistent brace style for blocks
-        "brace-style": ["warn", "1tbs", {"allowSingleLine": true}],
+        "brace-style": ["error", "stroustrup", {"allowSingleLine": true}],
         //enforce consistent spacing inside computed property brackets
         "computed-property-spacing": ["warn"],
         //require parentheses when invoking a constructor with no arguments
@@ -91,8 +91,6 @@ module.exports = {
         "prefer-const": ["error"],
         //require template literals instead of string concatenation
         "prefer-template": ["error"],
-        //require generator functions to contain yield
-        "require-yield": ["error"],
         //require or disallow spacing around embedded expressions of template strings
         "template-curly-spacing": ["error"],
         //disallow unnecessary semicolons
@@ -100,7 +98,7 @@ module.exports = {
         //disallow Object constructors
         "no-new-object": ["error"],
         //require quotes around object literal property names
-        "quote-props": ["error", "as-needed", {"keywords": true, "numbers": true}],
+        "quote-props": ["error", "as-needed", {"numbers": true}],
         //Prefer destructuring from arrays and objects
         "prefer-destructuring": ["error"],
         //Disallow Functions in Loops
@@ -130,7 +128,7 @@ module.exports = {
         //Requires or disallows a whitespace (space or tab) beginning a comment
         "spaced-comment": ["error"],
         //require a newline after each call in a method chain
-        "newline-per-chained-call": ["error", {"ignoreChainWithDepth": 4}],
+        "newline-per-chained-call": ["error", {"ignoreChainWithDepth": 5}],
         //disallow whitespace before properties
         "no-whitespace-before-property": ["error"],
         //Disallow Primitive Wrapper Instances
