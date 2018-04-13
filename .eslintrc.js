@@ -132,6 +132,12 @@ module.exports = {
         //disallow whitespace before properties
         "no-whitespace-before-property": ["error"],
         //Disallow Primitive Wrapper Instances
-        "no-new-wrappers": ["error"]
+        "no-new-wrappers": ["error"],
+        // disallow reassigning function declarations (no-func-assign)
+        "no-func-assign": ["error"],
+        // Enforce require() on the top-level module scope (global-require)
+        "global-require": ["error"],
+        "prefer-arrow-callback": ["error"],
+        "func-style": ["error", "expression", {"allowArrowFunctions": true}]
     }
 };
